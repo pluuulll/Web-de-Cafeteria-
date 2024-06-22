@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="CCS/Session.css" />
+  <title>Login</title>
+</head>
+
+<body style="background-image: url(IMG/session-cafeteria.jpg);">
+  <section>
+    <div class="contenedor">
+      <div class="formulario">
+        <form id="loginForm">
+          <h2>INICIO DE SESIÓN</h2>
+
+          <div class="input-contenedor">
+            <i class="fas fa-envelope icon"></i>
+            <input type="text" id="loginEmail" placeholder="" required />
+            <label for="loginEmail">Correo</label>
+          </div>
+
+          <div class="input-contenedor">
+            <i class="fas fa-key icon"></i>
+            <input type="password" id="loginPassword" placeholder="" required />
+            <label for="loginPassword">Contraseña</label>
+          </div>
+
+          <div class="olvidar">
+            <label for="#">
+              <input type="checkbox">
+              <a href="#">Olvidar Contraseña</a>
+            </label>
+          </div>
+
+          <button type="submit">Acceder</button>
+
+        </form>
+
+        <div>
+          <div class="regristrar">
+            <p>No tengo cuenta <a href="registro.html">Registrarme</a></p>
+          </div>
+
+          <!-- Botón para redirigir al index.html -->
+          <button id="redirectToIndex" onclick="window.location.href='index.html';">Volver al Inicio</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      var email = document.getElementById("loginEmail").value;
+      var password = document.getElementById("loginPassword").value;
+      var storedUser = JSON.parse(localStorage.getItem("user"));
+      if (storedUser && storedUser.email === email && storedUser.password === password) {
+        alert("Inicio de sesión exitoso.");
+        // Redirigir al usuario a index.html
+        window.location.href = "index.html";
+      } else {
+        alert("Correo electrónico o contraseña incorrectos. Inténtalo de nuevo.");
+      }
+    });
+  </script>
+  
+</body>
+
+</html>

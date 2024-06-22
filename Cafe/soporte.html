@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte Técnico</title>
+    <style>
+        body {
+            background-image: url('img/soporte.jpg');
+            /* Ruta de tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #container {
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Fondo semi-transparente */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #response {
+            display: none;
+        }
+
+        /* Estilos para el botón "Enviar mensaje" y "Volver al inicio" */
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos específicos para el botón "Volver al inicio" */
+        .back-to-home {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Soporte Técnico</h1>
+        <p>Por favor, completa el siguiente formulario para enviar tu mensaje:</p>
+        <form id="supportForm">
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Correo electrónico:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Mensaje:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+            <button type="submit">Enviar mensaje</button>
+        </form>
+
+        <div id="response">
+            <p>Gracias por tu comentario. Que tengas un lindo día.</p>
+            <button class="back-to-home" onclick="window.location.href = 'index.html';">Volver al inicio</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("supportForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Evitar que se envíe el formulario automáticamente
+
+            // Aquí podrías agregar lógica para enviar el formulario mediante AJAX o guardar los datos en una base de datos
+
+            // Muestra el mensaje de agradecimiento
+            document.getElementById("supportForm").style.display = "none";
+            document.getElementById("response").style.display = "block";
+        });
+    </script>
+</body>
+
+</html>

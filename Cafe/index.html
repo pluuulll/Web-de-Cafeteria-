@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafesito</title>
+    <link rel="stylesheet" href="CCS/styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body style="width: 100%; height: 100%; margin: 0;">
+    <div class="container" style="width: 100%; height: 100%;">
+        <!-- Encabezado de la página -->
+        <header>
+            <div class="container-hero">
+                <!-- Contenedor del logotipo y elementos de usuario -->
+                <div class="container hero">
+                    <!-- Logo de la cafetería -->
+                    <div class="container-logo-1" style="float: left;">
+                        
+                        <h1 class="logo-small">
+                            <a href="index.html">
+                                <img src="IMG/logo-cafeteria.jpg" alt="Logo" style="width: 200px; height: auto;">
+                            </a>
+                        </h1>
+                    </div>
+
+                    <!-- Título de la cafetería -->
+                    <div class="container-logo text-center">
+                        <i class="fa-solid fa-mug-hot"></i>
+                        <h1 class="logo"><a href="/">Cafesito</a></h1>
+                    </div>
+
+                    <!-- Enlaces de usuario y carrito de compras -->
+                    <div class="container-user">
+                        <div class="user-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barra de navegación -->
+            <div class="container-navbar">
+                <nav class="navbar container">
+                    <i class="fa-solid fa-bars"></i>
+                    <ul class="menu">
+                        <!-- Enlaces del menú -->
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="Info.html">Información</a></li>
+                        <li><a href="Comentarios.html">Comentarios</a></li>
+                        <li><a href="soporte.html">Más</a></li>
+                        <li><a href="perfil.html">Perfil</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                    <!-- Formulario de búsqueda -->
+                    <form class="search-form" action="/ruta/de/tu/acción" method="GET">
+                        <input type="search" name="q" placeholder="Buscar..." />
+                        <button type="submit" class="btn-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Contenido principal -->
+        <main class="text-center">
+            <!-- Carusel con imagenes -->
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/gallery1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/gallery2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/gallery3.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <!-- Controles del carrusel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <br>
+
+            <div class="content-container" style="padding: 20px;">
+                <!-- Botón que te redirige a otro HTML -->
+                <button onclick="window.location.href = 'Carrito.html'" class="button">¡Productos!</button>
+
+                <br>
+                <br>
+                <br>
+
+                <!-- Otras secciones de la página (solo imagenes)-->
+                <section class="gallery">
+                    <img src="img/gallery4.jpg" alt="Gallery Img4" class="gallery-img-4" />
+                    <img src="img/gallery5.jpg" alt="Gallery Img5" class="gallery-img-5" />
+                </section>
+
+                <br>
+
+                <div class="text-block">
+                    <div class="wrapper-inner">
+                        <div class="title-block">
+                            <div class="code-paragraph">
+                                <h1 class="title xxl" style="font-size: 2em;">¡Hola café gratis!</h1>
+                            </div>
+                        </div>
+                        <div class="field field-abstract">
+                            <div class="code-paragraph">
+                                <p style="font-size: 1.9em;">Regístrate en Cafesito Club y obtén muchos beneficios.</p>
+                            </div>
+                        </div>
+                        <a href="alo.html" id="banner-image-5b2a23ae-77d6-4730-8793-ef7e0984d137" class="button">Únete
+                            aquí</a>
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+
+    <!-- Sección de blog que hace la gente sobre la cafeteria -->
+    <section class="container blogs">
+        <h1 class="heading-1">Últimos Blogs</h1>
+
+        <div class="container-blogs">
+            <div class="card-blog">
+                <div class="container-img">
+                    <img src="img/blog-1.jpg" alt="Imagen Blog 1" />
+                </div>
+                <div class="content-blog">
+                    <h3>Lorem, ipsum dolor sit</h3>
+                    <span>25 de febrero del 2024</span>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, molestiae! Ratione et, dolore
+                        ipsum
+                        quaerat iure illum reprehenderit non maxime amet dolor voluptas facilis corporis,
+                        consequatur eius est sunt
+                        suscipit?
+                    </p>
+                    <div class="btn-read-more">Leer más</div>
+                </div>
+            </div>
+            <div class="card-blog">
+                <div class="container-img">
+                    <img src="img/blog-2.jpg" alt="Imagen Blog 2" />
+                </div>
+                <div class="content-blog">
+                    <h3>Lorem, ipsum dolor sit</h3>
+                    <span>17 de marzo del 2024</span>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, molestiae! Ratione et, dolore
+                        ipsum
+                        quaerat iure illum reprehenderit non maxime amet dolor voluptas facilis corporis,
+                        consequatur eius est sunt
+                        suscipit?
+                    </p>
+                    <div class="btn-read-more">Leer más</div>
+                </div>
+            </div>
+            <div class="card-blog">
+                <div class="container-img">
+                    <img src="img/blog-3.jpg" alt="Imagen Blog 3" />
+                </div>
+                <div class="content-blog">
+                    <h3>Lorem, ipsum dolor sit</h3>
+                    <span>6 de Abril del 2024</span>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, molestiae! Ratione et, dolore
+                        ipsum
+                        quaerat iure illum reprehenderit non maxime amet dolor voluptas facilis corporis,
+                        consequatur eius est sunt
+                        suscipit?
+                    </p>
+                    <div class="btn-read-more">Leer más</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin del bloque de contenido solicitado -->
+    </main>
+
+    <footer class="footer text-center">
+        <!-- Contenedor del pie de página -->
+        <div class="container container-footer">
+            <!-- Menú de pie de página -->
+            <div class="menu-footer">
+                <!-- Información de contacto -->
+                <div class="contact-info">
+                    <!-- Título -->
+                    <p class="title-footer">Información de Contacto</p>
+                    <!-- Lista de información de contacto -->
+                    <ul>
+                        <li>Dirección: 71 Pennington Lane Vernon Rockville, CT 06066</li>
+                        <li>Teléfono: +569 8954 2658</li>
+                        <li>EmaiL: Cafesito@support.com</li>
+                    </ul>
+                    <!-- Iconos de redes sociales -->
+                    <div class="social-icons">
+                        <span class="facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </span>
+                        <span class="twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </span>
+                        <span class="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Información general -->
+                <div class="information">
+                    <!-- Título -->
+                    <p class="title-footer">Información</p>
+                    <!-- Lista de enlaces -->
+                    <ul>
+                        <li><a href="#">Acerca de Nosotros</a></li>
+                        <li><a href="#">Contactános</a></li>
+                    </ul>
+                </div>
+
+                <!-- Mi cuenta -->
+                <div class="my-account">
+                    <!-- Título -->
+                    <p class="title-footer">Mi cuenta</p>
+                    <!-- Lista de enlaces -->
+                    <ul>
+                        <li><a href="perfil.html">Mi cuenta</a></li>
+                        <li><a href="#">Boletín</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <!-- Script para agregar productos al carrito -->
+    <script>
+        // Función para agregar un producto al carrito
+        function addToCart(productName, price) {
+            // Puedes agregar aquí el código para agregar productos al carrito
+            // Por ahora, simplemente imprimiré un mensaje en la consola
+            console.log("Agregaste " + productName + " al carrito por $" + price);
+        }
+    </script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="JS/script.js"></script>
+
+    <!-- Fin de contenido agregado -->
+    <h2 class="text-center"></h2>
+    <div id="profileInfo">
+        <!-- Aquí se mostrará la información del perfil -->
+    </div>
+
+    <button onclick="logout()" class="btn btn-primary mx-auto d-block">Cerrar Sesión</button>
+
+    <script>
+        // Obtener los datos del usuario desde localStorage al cargar la página
+        document.addEventListener("DOMContentLoaded", function () {
+            var storedUser = JSON.parse(localStorage.getItem("user"));
+            if (storedUser) {
+                document.getElementById("profileInfo").innerHTML = "<p>Correo Electrónico: " + storedUser.email + "</p>";
+            } else {
+                // Si no hay usuario almacenado, redirigir al inicio de sesión
+                window.location.href = "login.html";
+            }
+        });
+
+        // Función para cerrar sesión
+        function logout() {
+            localStorage.removeItem("user");
+            alert("Sesión cerrada exitosamente.");
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+
+</html>

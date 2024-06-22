@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('img/perfil.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    #container {
+      max-width: 600px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    #profilePicture {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h2>Perfil del Usuario</h2>
+    <div id="profileInfo">
+      <!-- Espacio para la foto de perfil -->
+      <img id="profilePicture" src="img/foto-perfil.jpg" alt="Foto de perfil">
+      <input type="file" id="profileImageInput">
+    </div>
+
+    <button onclick="goToIndex()">Volver al Inicio</button>
+    <button onclick="logout()">Cerrar Sesión</button>
+  </div>
+
+  <script>
+    // Obtener los datos del usuario desde localStorage al cargar la página
+    document.addEventListener("DOMContentLoaded", function() {
+      var storedUser = JSON.parse(localStorage.getItem("user"));
+      if (storedUser) {
+        var profileDiv = document.getElementById("profileInfo");
+        profileDiv.innerHTML = `
+          <p>Correo Electrónico: <span id="email">${storedUser.email}</span></p>
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" value="${storedUser.name}">
+          <label for="age">Edad:</label>
+          <input type="number" id="age" value="${storedUser.age}">
+          <label for="bio">Biografía:</label>
+          <textarea id="bio">${storedUser.bio}</textarea>
+          <button onclick="saveChanges()">Guardar Cambios</button>
+        `;
+      } else {
+        // Si no hay usuario almacenado, redirigir al inicio de sesión
+        window.location.href = "login.html";
+      }
+    });
+
+    // Función para guardar los cambios en el perfil
+    function saveChanges() {
+      var name = document.getElementById("name").value;
+      var age = document.getElementById("age").value;
+      var bio = document.getElementById("bio").value;
+      var storedUser = JSON.parse(localStorage.getItem("user"));
+      if (storedUser) {
+        storedUser.name = name;
+        storedUser.age = age;
+        storedUser.bio = bio;
+        localStorage.setItem("user", JSON.stringify(storedUser));
+        // Actualizar la visualización de los datos
+        document.getElementById("email").innerText = storedUser.email;
+        alert("Cambios guardados correctamente.");
+      }
+    }
+
+    // Función para redirigir al index.html
+    function goToIndex() {
+      window.location.href = "index.html";
+    }
+
+    // Función para cerrar sesión
+    function logout() {
+      localStorage.removeItem("user");
+      window.location.href = "index.html";
+    }
+
+    // Manejo de la carga de la imagen de perfil
+    document.getElementById("profileImageInput").addEventListener("change", function(event) {
+      var profilePicture = document.getElementById("profilePicture");
+      var file = event.target.files[0];
+      var reader = new FileReader();
+
+      reader.onload = function() {
+        profilePicture.src = reader.result;
+      };
+
+      reader.readAsDataURL(file);
+    });
+  </script>
+</body>
+
+</html>

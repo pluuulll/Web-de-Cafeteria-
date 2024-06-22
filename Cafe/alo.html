@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafesito Club</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #c8a17d;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .cta-buttons a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid black;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .cta-buttons a.unete {
+            background-color: black;
+            color: white;
+        }
+
+        .main-content {
+            display: flex;
+            padding: 50px 20px;
+        }
+
+        .main-content .left {
+            background-color: #c8a17d;
+            color: white;
+            padding: 50px;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .main-content .left img {
+            width: 150px;
+        }
+
+        .main-content .left h1 {
+            margin-top: 20px;
+            font-size: 2.5em;
+        }
+
+        .main-content .left p {
+            margin: 20px 0;
+        }
+
+        .main-content .right {
+            background-color: #f4f4f4;
+            width: 60%;
+            padding: 50px;
+        }
+
+        .benefits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .benefit {
+            width: 45%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .benefit img {
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo-link">
+            <img src="img/logo-cafeteria.jpg" alt="Logo" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="Comentarios.html">REWARDS</a></li>
+                <li><a href="carrito.html">MENÚ</a></li>
+            </ul>
+        </nav>
+        <div class="cta-buttons">
+            <a href="registro.html" class="unete">Únete</a>
+            <a href="login.html">Iniciar Sesión</a>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="left">
+            <img src="img/logo-cafeteria.jpg" alt="Cafesito">
+            <h1>Hola, café gratis!</h1>
+            <p>Unete a nosotros y Puedes ganar muchos beneficios!</p>
+            <div class="cta-buttons">
+                <a href="registro.html" class="unete">Únete</a>
+                <a href="login.html">Iniciar Sesión</a>
+            </div>
+        </div>
+        <div class="right">
+            <h2>Disfruta de los beneficios de Cafesito</h2>
+            <div class="benefits">
+                <div class="benefit">
+                    <img src="https://via.placeholder.com/50" alt="Bebida cumpleaños">
+                    <p>Un Cafe gratis en el dia de tu cumpleaños</p>
+                </div>
+                <div class="benefit">
+                    <img src="https://via.placeholder.com/50" alt="Ofertas exclusivas">
+                    <p>Ofertas exclusivas y personalizadas para ti</p>
+                </div>
+                <div class="benefit">
+                    <img src="https://via.placeholder.com/50" alt="Refill de Café del Día">
+                    <p>Refill de Café del Día</p>
+                </div>
+                <div class="benefit">
+                    <img src="https://via.placeholder.com/50" alt="Bebida de regalo">
+                    <p>Bebida de regalo </p>
+                </div>
+                <div class="benefit">
+                    <img src="https://via.placeholder.com/50" alt="trozo de pastel con compra de café">
+                    <p>trozo de pastel de regalo con la compra de Café en Grano</p>
+                </div>
+                <div class="benefit">
+                    <img src="https://via.placeholder.com/50" alt="Lanzamientos">
+                    <p>Prueba antes que nadie nuestros lanzamientos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

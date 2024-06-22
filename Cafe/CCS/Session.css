@@ -1,0 +1,81 @@
+
+body {
+    background-image: url(IMG/session-cafeteria.jpg);
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el fondo */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contenedor {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formulario {
+    text-align: center;
+  }
+  
+  .input-contenedor {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-contenedor input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  .input-contenedor input:focus ~ label,
+  .input-contenedor input:valid ~ label {
+    top: -15px;
+    font-size: 12px;
+    color: #333;
+  }
+  
+  .input-contenedor label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #999;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .olvidar {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .olvidar a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  .registrar a {
+    color: #333;
+    text-decoration: none;
+  }
